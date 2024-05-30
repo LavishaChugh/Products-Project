@@ -1,6 +1,9 @@
-using Microsoft.EntityFrameworkCore;
-using Products.Data;
-using Products.Services.Items;
+global using Microsoft.EntityFrameworkCore;
+global using Products.Data;
+global using Products.Services.Items;
+global using Products.Services.Purchase;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +17,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IItemService, ItemService>();
+builder.Services.AddScoped<IPurchaseService,PurchaseService>();
+
 
 var app = builder.Build();
 

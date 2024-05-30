@@ -1,13 +1,11 @@
-﻿
-
-using Products.Models;
+﻿using Products.Models;
 
 namespace Products.Services.Items
 {
     public interface IItemService
     {
 
-        public Task<List<Item>> GetItems();
+        public Task<List<Models.Item>> GetItems();
 
         public Task<Item> GetItemById(Guid id);
 

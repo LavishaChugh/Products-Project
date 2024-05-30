@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Products.Data;
+﻿
 using Products.Models;
 
 namespace Products.Services.Items

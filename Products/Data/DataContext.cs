@@ -20,5 +20,8 @@ namespace Products.Data
 
         public DbSet<Item> Items { get; set; }
 
+        public DbSet<Puchase> Puchases { get; set; }
+
+
     }
 }
