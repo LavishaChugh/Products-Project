@@ -11,5 +11,9 @@ namespace Products.Services.Purchase
 
         public Task<List<Puchase>> Delete(Guid id);
 
+        public Task<List<Puchase>> Add(Puchase purchase);
+
+        public Task<List<Puchase>> UpdatePurchase(Puchase purchase);
+
     }
 }

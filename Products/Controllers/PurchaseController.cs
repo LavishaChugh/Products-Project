@@ -41,5 +41,21 @@ namespace Products.Controllers
             return Ok(result);
         }
 
+        //ADD
+        [HttpPost]
+        public async Task<ActionResult<List<Puchase>>> Add(Puchase purchase)
+        {
+            var result = await _purchaseService.Add(purchase);
+            return Ok(result);
+        }
+
+        //UPDATE
+        [HttpPut]
+        public async Task<ActionResult<List<Puchase>>> Update(Puchase purchase)
+        {
+            var result = await _purchaseService.UpdatePurchase(purchase);
+            return Ok(result);
+        }
+
     }
 }
