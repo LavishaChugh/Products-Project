@@ -1,5 +1,4 @@
-﻿using Products.Migrations;
-using Products.Models;
+﻿global using Products.Models;
 
 namespace Products.Services.Purchase
 {
@@ -63,6 +62,7 @@ namespace Products.Services.Purchase
             return result;
         }
 
+        //update
         public async Task<List<Puchase>> UpdatePurchase(Puchase purchase)
         {
 

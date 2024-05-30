@@ -22,6 +22,8 @@ namespace Products.Data
 
         public DbSet<Puchase> Puchases { get; set; }
 
+        public DbSet<Stock> stocks { get; set; }
+
 
     }
 }

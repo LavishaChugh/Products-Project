@@ -2,6 +2,7 @@ global using Microsoft.EntityFrameworkCore;
 global using Products.Data;
 global using Products.Services.Items;
 global using Products.Services.Purchase;
+using Products.Services.Stocks;
 
 
 
@@ -18,6 +19,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IItemService, ItemService>();
 builder.Services.AddScoped<IPurchaseService,PurchaseService>();
+builder.Services.AddScoped<IStockService, StockService>();
+
 
 
 var app = builder.Build();
