@@ -27,7 +27,7 @@ namespace Products.Services.Items
         {
             var item = await _context.Items.FirstOrDefaultAsync(x => x.Id == id);
 
-            if (item is null)
+            if (item is null || item.Id != id)
             {
                 throw new Exception("ID NOT FOUND!");
             }
@@ -47,7 +47,7 @@ namespace Products.Services.Items
 
             var item = await _context.Items.FirstOrDefaultAsync(c => c.Id == id);
 
-            if (item is null)
+            if (item is null || item.Id != id)
             {
                 throw new Exception("ID NOT FOUND");
             }
@@ -62,10 +62,16 @@ namespace Products.Services.Items
             return await _context.Items.ToListAsync();
         }
 
+        //UPDATE
         public async Task<List<Item>> UpdateItem(Item updateitem)
         {
             
             var item = await _context.Items.FirstOrDefaultAsync(x => x.Id == updateitem.Id);
+
+            if (updateitem is null)
+            {
+                throw new Exception("ID NOT FOUND!");
+            }
 
             item.Name = updateitem.Name;
             item.Price = updateitem.Price;
